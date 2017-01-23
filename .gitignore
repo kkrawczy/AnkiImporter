@@ -1,0 +1,19 @@
+.classpath
+.project
+.idea
+*.iml
+*.sh
+.settings
+.directory
+/target
+*.log*
+src/main/static/
+/logback.xml
+
+# Docker
+*.env
+
+# OS X
+.DS_Store
+
+/application*.yml
