@@ -26,7 +26,7 @@ public class Exercise {
         french = data[0].replaceAll(OUTPUT_SEPARATOR, ",");
         polish = data[1].replaceAll(OUTPUT_SEPARATOR, ",");
 
-        type = data[2].equals("0") ? ExerciseType.SAY : ExerciseType.WRITE;
+        type = ExerciseType.getByNumberCode(data[2]);
     }
 
     private void assertAllInfoIsPresent(String[] data) {
@@ -55,5 +55,9 @@ public class Exercise {
 }
 
 enum ExerciseType {
-    SAY, WRITE
+    SAY, WRITE, UNDERSTAND;
+
+    public static ExerciseType getByNumberCode(String code) {
+        return values()[Integer.parseInt(code)];
+    }
 }

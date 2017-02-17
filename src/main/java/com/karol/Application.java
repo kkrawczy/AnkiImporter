@@ -10,6 +10,7 @@ public class Application {
 
     public static void main(String... s) throws Exception {
         new Application().ankiFileGenerator.generateImportData();
+        System.out.println("done");
     }
 
 }
