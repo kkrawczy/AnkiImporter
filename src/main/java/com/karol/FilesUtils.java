@@ -9,7 +9,7 @@ public class FilesUtils {
     public static String[] FORBIDDEN_CHARS = {"/", "<", ">", ":", "\\\"", "|", "\\?", "\\*", ";"};
 
     public static String generateValidFileName(String s) {
-        int toIndex = s.length() > 30 ? 30 : (s.length());
+        int toIndex = Math.min(s.length(), 30);
         s = s.substring(0, toIndex)
             .replaceAll(" ", "_").trim();
         return replaceForbiddenChars(s);
