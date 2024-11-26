@@ -14,7 +14,7 @@ import static java.util.stream.Collectors.toList;
 
 @AllArgsConstructor
 public class AnkiFileGenerator {
-    private AmazonService amazonService;
+    private AudioService amazonService;
     private String audioPath;
     private String importFile;
     private String ankiImportFile;
