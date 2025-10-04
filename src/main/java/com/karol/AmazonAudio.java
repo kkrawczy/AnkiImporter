@@ -22,7 +22,8 @@ public class AmazonAudio implements AudioService {
         SynthesizeSpeechRequest request = SynthesizeSpeechRequest.builder()
             .textType(TextType.SSML)
             .text("<speak><break time=\"500ms\"/><prosody rate=\"slow\">" + text + "</prosody></speak>")
-            .voiceId(VoiceId.MATTHEW)
+            //.voiceId(VoiceId.MATTHEW)
+            .voiceId(VoiceId.MATHIEU)
             .outputFormat(OutputFormat.MP3)
             .build();
 

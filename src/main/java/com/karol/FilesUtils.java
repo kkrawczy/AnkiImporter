@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class FilesUtils {
-    public static String[] FORBIDDEN_CHARS = {"/", "<", ">", ":", "\\\"", "|", "\\?", "\\*", ";"};
+    public static String[] FORBIDDEN_CHARS = {"/", "<", ">", ":", "\\\"", "|", "\\?", "\\*", ";", "\\."};
 
     public static String generateValidFileName(String s) {
         int toIndex = Math.min(s.length(), 30);

@@ -12,5 +12,6 @@ public class FilesUtilsTest {
         assertEquals("karol", FilesUtils.generateValidFileName("karo/l?"));
         assertEquals("karol_jest_cool", FilesUtils.generateValidFileName("karol jest cool"));
         assertEquals("karol__jest_cool", FilesUtils.generateValidFileName("karol  jest cool"));
+        assertEquals("karol_jest_cool", FilesUtils.generateValidFileName("karol jest cool."));
     }
 }
